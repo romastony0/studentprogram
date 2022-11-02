@@ -1,0 +1,28 @@
+class person{
+    name:string
+    display():void{
+        console.log(this.name+"is a student name");
+        
+    }
+}
+class student extends person{
+    rollnumber:number
+    constructor(rollnumber:number,name1:string){
+        super()
+        this.rollnumber=rollnumber
+        this.name=name1
+    }
+displayinformation():void{
+    console.log("name :"+this.name+".Roll number:"+this.rollnumber);
+}
+}
+var student1=new student(2,"romas")
+var student2=new student(3,"romastony")
+console.log("Student 1 name is :" +student1.name);
+console.log("Student 2 name is :" +student2.name);
+console.log("----------");
+student1.displayinformation()
+student1.display()
+console.log("----------");
+student2.displayinformation()
+student2.display()
